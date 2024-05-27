@@ -89,8 +89,6 @@ public class Main {
                                     //once the user finish the input set change into false to exit the while loop
                                     change = false;
 
-//                                        } else if (changeOption.equalsIgnoreCase("no")) {
-//                                            continue; // if entered no then continue the loop
                                 } else if (!changeOption.equalsIgnoreCase("no")) {
                                     System.out.println("enter yes or no");
                                     change = false;
