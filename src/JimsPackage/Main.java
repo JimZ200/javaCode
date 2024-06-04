@@ -24,7 +24,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in); //create scanner object
 
-        Main it = new Main(); //create the JimsPackage.Main object to deal with the usage of methods
+        Main it = new Main(); //create the Jim's Package.Main object to deal with the usage of methods
 
         //arraylist to deal with unknown amount of input
         ArrayList<Double> arr = new ArrayList<>();
