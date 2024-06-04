@@ -45,11 +45,5 @@ public class Sorting {
             arr[j + 1] = temp;
         }
     }
-    public static void main(String[] args) {
-        Sorting s = new Sorting();
-        int[] arr = {3,1,4,5,2,6};
-            s.insertionSort(arr);
-        System.out.println(Arrays.toString(arr));
-        }
-    }
+}
 
