@@ -18,7 +18,6 @@ public class Main {
 
         Main it = new Main(); //create the Jim's Package.Main object to deal with the usage of methods
 
-
         String input = "";
 
         while (!input.equalsIgnoreCase("exit")) {
@@ -59,7 +58,7 @@ public class Main {
                             System.out.print("Price entered: " + finalPrice + "$ ");
                             System.out.println("Do you want to change it enter y for Yes and n for No");
 
-                        String option2 = in.nextLine(); //option for yes or no
+                            String option2 = in.nextLine(); //option for yes or no
 
                                 if (option2.equalsIgnoreCase("y")) {
                                         while(true) {
