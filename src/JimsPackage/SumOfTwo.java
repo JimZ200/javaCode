@@ -1,7 +1,6 @@
 package JimsPackage;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
+
 public class SumOfTwo {
     public static void main(String[] args) {
         int[] arr = {1,2,3,4,5};
@@ -10,6 +9,14 @@ public class SumOfTwo {
 
         System.out.println(Arrays.toString(result));
         System.out.println(maxSubArray(arr));
+
+        int[] array = {1,2,3};
+        System.out.println("Count element: " + countElement(array));
+
+        int[] a = {1,2,3};
+        int[] b = {5,4,6};
+
+        System.out.println(itemInCommon(a,b));
     }
     static int[] twoSum(int[] arr, int target) {
         Map<Integer, Integer> map = new HashMap<>();
@@ -30,5 +37,32 @@ public class SumOfTwo {
             max = Math.max(max, curr);
         }
         return max;
+    }
+    static int countElement(int[] arr){
+        int count = 0;
+        Set<Integer> set = new HashSet<>();
+
+        for(int i : arr) {
+            set.add(i);
+        }
+
+        for(int i : arr) {
+            if (set.contains(i + 1)) {
+                count++;
+            }
+        }
+        return count;
+    }
+    static boolean itemInCommon(int[] a, int[] b){
+        Set<Integer> set = new HashSet<>();
+
+        for(int i : a) {
+            set.add(i);
+        }
+
+        for(int i : b) {
+            return set.contains(i);
+        }
+        return false;
     }
 }
