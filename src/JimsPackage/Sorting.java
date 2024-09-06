@@ -7,6 +7,7 @@ class Sorting{
         int[] arr = {5,4,3,2,1};
         selectionSort(arr);
         System.out.println(Arrays.toString(arr));
+        System.gc();
     }
     static void insertionSort(int[] a){
         for(int i = 1; i<a.length; i++) {
