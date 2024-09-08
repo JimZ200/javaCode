@@ -4,10 +4,8 @@ import java.util.Arrays;
 
 class Sorting{
     public static void main(String[] args) {
-        int[] arr = {5,4,3,2,1};
-        selectionSort(arr);
-        System.out.println(Arrays.toString(arr));
-        System.gc();
+        int[] a = {1,1,3,2,0,-1};
+        System.out.println(Arrays.toString(mergeSort(a)));
     }
     static void insertionSort(int[] a){
         for(int i = 1; i<a.length; i++) {
@@ -34,6 +32,48 @@ class Sorting{
                 arr[minIndex] = temp;
             }
         }
+    }
+
+        static int[] mergeSortHelper(int[] a, int[] b){
+        int[] newArray = new int[a.length + b.length];
+        int j = 0;
+        int i =0;
+        int k = 0;
+        while(i < a.length && j < b.length) {
+            if(a[i] < b[j]) {
+                newArray[k] = a[i];
+                i++;
+                k++;
+            } else {
+                newArray[k] = b[j];
+                j++;
+                k++;
+            }
+        }
+
+        while(i< a.length) {
+            newArray[k] = a[i];
+            k++;
+            i++;
+        }
+
+        while(j < b.length) {
+            newArray[k] = b[j];
+            k++;
+            j++;
+        }
+
+        return newArray;
+    }
+
+    static int[] mergeSort(int[] arr){
+        if(arr.length == 1) {
+            return arr;
+        }
+        int[] left = mergeSort(Arrays.copyOfRange(arr,0,arr.length/2));
+        int[] right = mergeSort(Arrays.copyOfRange(arr, arr.length/2, arr.length));
+
+        return mergeSortHelper(left, right);
     }
 
 }
