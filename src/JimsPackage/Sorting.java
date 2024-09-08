@@ -4,8 +4,20 @@ import java.util.Arrays;
 
 class Sorting{
     public static void main(String[] args) {
-        int[] a = {1,1,3,2,0,-1};
-        System.out.println(Arrays.toString(mergeSort(a)));
+        int[] a = {4,3,2,1};
+        bubbleSort(a);
+        System.out.println(Arrays.toString(a));
+    }
+    static void bubbleSort(int[] a){
+        for(int i=0; i<a.length; i++) {
+            for(int j = i+1; j<a.length; j++) {
+                if (a[i] > a[j]) {
+                    int temp = a[j];
+                    a[j] = a[i];
+                    a[i] = temp;
+                }
+            }
+        }
     }
     static void insertionSort(int[] a){
         for(int i = 1; i<a.length; i++) {
