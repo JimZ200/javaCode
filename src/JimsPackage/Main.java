@@ -1,3 +1,9 @@
+/*
+    Author: Jim Zhang
+    This code uses loops to ask user input and perform some input check and compute the number by
+    times it by 15%
+ */
+
 package JimsPackage;
 import java.util.Scanner; //import scanner class
 public class Main {
