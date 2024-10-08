@@ -3,13 +3,8 @@ package JimsPackage;
 import java.util.Arrays;
 
 class Sorting{
-    public static void main(String[] args) {
-        int[] a = {4,3,2,1};
-        bubbleSort(a);
-        System.out.println(Arrays.toString(a));
-    }
 
-    static void bubbleSort(int[] a){
+     void bubbleSort(int[] a){
         for(int i=0; i<a.length; i++) {
             for(int j = i+1; j<a.length; j++) {
                 if (a[i] > a[j]) {
@@ -20,7 +15,7 @@ class Sorting{
             }
         }
     }
-    static void insertionSort(int[] a){
+    void insertionSort(int[] a){
         for(int i = 1; i<a.length; i++) {
             int temp = a[i];
             int j = i - 1;
@@ -31,7 +26,7 @@ class Sorting{
             a[j + 1] = temp;
         }
     }
-    static void selectionSort(int[] arr){
+     void selectionSort(int[] arr){
         for(int i =0; i<arr.length; i++){
             int minIndex = i;
             for(int j = i+1; j<arr.length; j++) {
@@ -47,13 +42,13 @@ class Sorting{
         }
     }
 
-        static int[] mergeSortHelper(int[] a, int[] b){
-        int[] newArray = new int[a.length + b.length];
-        int j = 0;
-        int i =0;
-        int k = 0;
-        while(i < a.length && j < b.length) {
-            if(a[i] < b[j]) {
+        private int[] mergeSortHelper(int[] a, int[] b){
+            int[] newArray = new int[a.length + b.length];
+            int j = 0;
+            int i =0;
+            int k = 0;
+            while(i < a.length && j < b.length) {
+             if(a[i] < b[j]) {
                 newArray[k] = a[i];
                 i++;
                 k++;
@@ -79,7 +74,7 @@ class Sorting{
         return newArray;
     }
 
-    static int[] mergeSort(int[] arr){
+     int[] mergeSort(int[] arr){
         if(arr.length == 1) {
             return arr;
         }
